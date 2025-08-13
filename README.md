@@ -2,6 +2,8 @@
 
 一个基于AI的全栈塔罗占卜应用，使用MACore框架构建后端，Next.js构建前端。
 
+![首页](https://github.com/lc708/begin.new_ai_tarrot_agent/blob/master/assets/Landing.png)  ![占卜页](https://github.com/lc708/begin.new_ai_tarrot_agent/blob/master/assets/Devination.png) 
+
 ## 🌟 特色功能
 
 - **🔮 智能占卜师**：友好幽默的AI占卜师"星月"，避免过于神秘的表达
@@ -10,6 +12,8 @@
 - **✨ 完整流程**：从欢迎到建议的完整占卜体验
 - **🎨 精美界面**：紫色+金色神秘主题
 - **📱 响应式设计**：支持桌面和移动端
+  
+![移动端](https://github.com/lc708/begin.new_ai_tarrot_agent/blob/master/assets/Mobile.png) 
 
 ## 🚀 快速开始
 
