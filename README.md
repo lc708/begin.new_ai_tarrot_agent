@@ -154,7 +154,7 @@ flowchart TD
     spread --> draw[抽牌过程]
     draw --> interpret[牌面解读]
     interpret --> advice[给出建议]
-    advice --> end[结束祝福]
+    advice --> blessing[结束祝福]
 ```
 
 ## 🃏 塔罗牌系统
