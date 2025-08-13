@@ -69,6 +69,18 @@ async def root():
     """API根端点"""
     return {"message": "欢迎使用塔罗占卜师API ✨🔮"}
 
+@app.get("/api/v1/status")
+async def health_check():
+    """健康检查接口，用于部署平台监控"""
+    from datetime import datetime
+    return {
+        "status": "healthy",
+        "service": "塔罗占卜师API",
+        "version": "1.0.0",
+        "timestamp": datetime.now().isoformat(),
+        "active_sessions": len(sessions)
+    }
+
 @app.post("/api/v1/divination/start", response_model=DivationResponse)
 async def start_divination(request: StartDivinationRequest):
     """开始新的占卜会话"""

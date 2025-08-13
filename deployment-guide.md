@@ -63,9 +63,19 @@
 
 ## 🔍 验证部署
 
-1. **后端检查**
+1. **后端健康检查**
    ```bash
    curl https://your-app-name.railway.app/api/v1/status
+   ```
+   期望返回：
+   ```json
+   {
+     "status": "healthy",
+     "service": "塔罗占卜师API",
+     "version": "1.0.0",
+     "timestamp": "2024-01-01T12:00:00.000000",
+     "active_sessions": 0
+   }
    ```
 
 2. **前端检查**
