@@ -25,7 +25,14 @@ app = FastAPI(
 # 添加CORS中间件
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],  # 前端地址
+    allow_origins=[
+        "http://localhost:3000", 
+        "http://127.0.0.1:3000",
+        "https://app-ai-tarot-agent.begin.new",  # 您的前端域名
+        "https://tarot-divination-jhzqw1z70-lc708s-projects.vercel.app",  # Vercel域名
+        "https://*.vercel.app",  # 允许所有Vercel子域
+        "https://*.begin.new"    # 允许所有begin.new子域
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
