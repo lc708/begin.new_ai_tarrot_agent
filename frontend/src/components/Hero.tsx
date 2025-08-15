@@ -5,7 +5,7 @@
 "use client";
 
 import { useState } from 'react';
-import { Sparkles, Star, Zap } from 'lucide-react';
+import { Sparkles, Star, Zap, Github, ExternalLink } from 'lucide-react';
 
 interface HeroProps {
   title: string;
@@ -19,6 +19,31 @@ export function Hero({ title, subtitle, onStartDivination, loading = false }: He
 
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* 顶部链接区域 */}
+      <div className="absolute top-4 right-4 md:top-6 md:right-6 z-20 flex space-x-3">
+        {/* GitHub 链接 */}
+        <a
+          href="https://github.com/lc708/begin.new_ai_tarrot_agent"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-800/50 hover:bg-gray-700/70 border border-gray-600/50 hover:border-gray-500/70 transition-all duration-300 hover:scale-105"
+          title="查看 GitHub 仓库"
+        >
+          <Github size={16} className="md:w-5 md:h-5 text-gray-400 group-hover:text-white transition-colors duration-300" />
+        </a>
+        
+        {/* Begin 平台链接 */}
+        <a
+          href="https://www.begin.new"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-800/50 hover:bg-primary-800/70 border border-gray-600/50 hover:border-primary-500/70 transition-all duration-300 hover:scale-105"
+          title="访问 Begin 平台"
+        >
+          <ExternalLink size={16} className="md:w-5 md:h-5 text-gray-400 group-hover:text-primary-300 transition-colors duration-300" />
+        </a>
+      </div>
+
       {/* 背景装饰 */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-gray-900 to-gray-800">
         {/* 浮动星星动画 */}
